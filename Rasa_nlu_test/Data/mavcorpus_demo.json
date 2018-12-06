@@ -1,0 +1,313 @@
+{
+  "data" : [
+    {
+      "text" : "Egy elsőosztályú menetjegyet szeretnék Nyíregyházára.",
+      "entities" : [
+        {
+          "entity" : "location",
+          "value" : "\"nyíregyháza\"",
+          "role" : "to",
+          "start" : 39,
+          "end" : 51
+        },
+        {
+          "entity" : "intent",
+          "value" : "\"vonat_foglalas\"",
+          "start" : 0,
+          "end" : 52
+        },
+        {
+          "entity" : "count",
+          "value" : "\"egy\"",
+          "start" : 0,
+          "end" : 2
+        },
+        {
+          "entity" : "class",
+          "value" : "\"elsőosztály\"",
+          "start" : 4,
+          "end" : 15
+        }
+      ]
+    },
+    {
+      "text" : "És a 16.11-es Intercity megy oda, ugye?",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"erdeklodes\"",
+          "start" : 0,
+          "end" : 38
+        },
+        {
+          "entity" : "time",
+          "value" : "\"16:11\"",
+          "start" : 5,
+          "end" : 9
+        },
+        {
+          "entity" : "type",
+          "value" : "\"intercity\"",
+          "start" : 14,
+          "end" : 22
+        },
+        {
+          "entity" : "location",
+          "value" : "\"oda\"",
+          "role" : "to",
+          "start" : 29,
+          "end" : 31
+        }
+      ]
+    },
+    {
+      "text" : "Nincs 16.11?",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"erdeklodes\"",
+          "start" : 0,
+          "end" : 11
+        },
+        {
+          "entity" : "time",
+          "value" : "\"16:11\"",
+          "start" : 6,
+          "end" : 10
+        }
+      ]
+    },
+    {
+      "text" : "Akkor a 16.23-asra kérek egy helyjegyet.",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"vonat_foglalas\"",
+          "start" : 0,
+          "end" : 39
+        },
+        {
+          "entity" : "count",
+          "value" : "\"egy\"",
+          "start" : 25,
+          "end" : 27
+        },
+        {
+          "entity" : "type",
+          "value" : "\"helyjegy\"",
+          "start" : 29,
+          "end" : 38
+        },
+        {
+          "entity" : "time",
+          "value" : "\"16:23\"",
+          "start" : 8,
+          "end" : 12
+        }
+      ]
+    },
+    {
+      "text" : "És számlát is kérek róla.",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"szamla_keres\"",
+          "start" : 0,
+          "end" : 24
+        },
+        {
+          "entity" : "szamla",
+          "value" : "\"számla\"",
+          "start" : 3,
+          "end" : 9
+        }
+      ]
+    },
+    {
+      "text" : "Kézcsók, Ferihegyig kérek egy teljesárút.",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"vonat_foglalas\"",
+          "start" : 0,
+          "end" : 40
+        },
+        {
+          "entity" : "count",
+          "value" : "\"egy\"",
+          "start" : 26,
+          "end" : 28
+        },
+        {
+          "entity" : "type",
+          "value" : "\"teljesárú\"",
+          "start" : 30,
+          "end" : 39
+        },
+        {
+          "entity" : "location",
+          "value" : "\"ferihegy\"",
+          "role" : "to",
+          "start" : 9,
+          "end" : 18
+        },
+        {
+          "entity" : "greet",
+          "value" : "\"kézcsók\"",
+          "start" : 0,
+          "end" : 6
+        }
+      ]
+    },
+    {
+      "text" : "Jónapot, egy diákot kérek Ferihegytől Monorig",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"vonat_foglalas\"",
+          "start" : 0,
+          "end" : 44
+        },
+        {
+          "entity" : "count",
+          "value" : "\"egy\"",
+          "start" : 9,
+          "end" : 11
+        },
+        {
+          "entity" : "type",
+          "value" : "\"diák\"",
+          "start" : 13,
+          "end" : 18
+        },
+        {
+          "entity" : "location",
+          "value" : "\"monor\"",
+          "role" : "to",
+          "start" : 38,
+          "end" : 44
+        },
+        {
+          "entity" : "location",
+          "value" : "\"ferihegy\"",
+          "role" : "from",
+          "start" : 26,
+          "end" : 36
+        },
+        {
+          "entity" : "greet",
+          "value" : "\"jónapot\"",
+          "start" : 0,
+          "end" : 6
+        }
+      ]
+    },
+    {
+      "text" : "Jónapot kívánok, Debrecenbe melyik vonattal érek leghamarabb?",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"erdeklodes\"",
+          "start" : 0,
+          "end" : 60
+        },
+        {
+          "entity" : "location",
+          "value" : "\"debrecen\"",
+          "role" : "to",
+          "start" : 17,
+          "end" : 26
+        },
+        {
+          "entity" : "time",
+          "value" : "\"leghamarabb\"",
+          "start" : 49,
+          "end" : 59
+        },
+        {
+          "entity" : "greet",
+          "value" : "\"jónapot kívánok\"",
+          "start" : 0,
+          "end" : 14
+        }
+      ]
+    },
+    {
+      "text" : "Jó, akkor arra kérek egy 90%-osat.",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"vonat_foglalas\"",
+          "start" : 0,
+          "end" : 33
+        },
+        {
+          "entity" : "count",
+          "value" : "\"egy\"",
+          "start" : 21,
+          "end" : 23
+        },
+        {
+          "entity" : "type",
+          "value" : "\"90%-os\"",
+          "start" : 25,
+          "end" : 32
+        },
+        {
+          "entity" : "time",
+          "value" : "\"arra\"",
+          "start" : 10,
+          "end" : 13
+        }
+      ]
+    },
+    {
+      "text" : "Jónapot kívánok, lenne egy ilyenem és kettőnknek szeretnék egy jegyet Ferihegyre.",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"vonat_foglalas\"",
+          "start" : 0,
+          "end" : 80
+        },
+        {
+          "entity" : "greet",
+          "value" : "\"jónapot kívánok\"",
+          "start" : 0,
+          "end" : 14
+        },
+        {
+          "entity" : "count",
+          "value" : "\"kettő\"",
+          "start" : 38,
+          "end" : 47
+        },
+        {
+          "entity" : "location",
+          "value" : "\"ferihegy\"",
+          "role" : "to",
+          "start" : 70,
+          "end" : 79
+        },
+      ]
+    },
+    {
+      "text" : "Csak oda.",
+      "entities" : [
+        {
+          "entity" : "intent",
+          "value" : "\"vonat_foglalas\"",
+          "start" : 0,
+          "end" : 8
+        },
+        {
+          "entity" : "location",
+          "value" : "\"oda\"",
+          "role" : "to",
+          "start" : 5,
+          "end" : 7
+        },
+      ]
+    },
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "pipeline": 
+  [
+	"nlp_spacy_hu", 
+	"tokenizer_spacy",
+	"intent_featurizer_spacy",
+	"intent_entity_featurizer_regex",
+	"ner_crf",
+	"ner_spacy",
+	"ner_synonyms",
+	"intent_classifier_sklearn"
+  ],
+  "path" : "./projects",
+  "data" : "./Data/mavcorpus_2.json",
+  "gate_server_url": "http://hlt.bme.hu/chatbot/gate/process?run="
+}

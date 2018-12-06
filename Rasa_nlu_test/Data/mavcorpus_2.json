@@ -1,0 +1,1510 @@
+{
+	"rasa_nlu_data": {
+		"regex_features": [{
+				"name": "zipcode",
+				"pattern": "[0-9]{5}"
+			},
+			{
+				"name": "greet",
+				"pattern": "hello[^\\s]*"
+			}
+		],
+		"entity_synonyms": [{
+			"value": "foglalás",
+			"synonyms": ["kérek", "szeretnék"]
+		}],
+		"common_examples": [{
+				"text": "jónapot",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "jónapot",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "jónapot kívánok",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "csókolom",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "jó reggelt!",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "jó estét",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "hello",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "szia",
+				"intent": "greet",
+				"entities": []
+			},
+			{
+				"text": "igen",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "ahha",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "jó",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "mindenképpen",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "így van",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "ok",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "remek",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "rendben, köszönöm",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "tökéletes",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "jó választás",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "jól hangzik",
+				"intent": "affirm",
+				"entities": []
+			},
+			{
+				"text": "Egy elsőosztályú menetjegyet szeretnék Nyíregyházára.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "location",
+						"value": "\"nyíregyháza\"",
+						"start": 39,
+						"end": 52
+					},
+					{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 0,
+						"end": 3
+					},
+					{
+						"entity": "class",
+						"value": "\"elsőosztály\"",
+						"start": 4,
+						"end": 16
+					}
+				]
+			},
+			{
+				"text": "És a 16.11-es Intercity megy oda, ugye?",
+				"intent": "erdeklodes",
+				"entities": [{
+						"entity": "time",
+						"value": "\"16:11\"",
+						"start": 5,
+						"end": 10
+					},
+					{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 14,
+						"end": 23
+					},
+					{
+						"entity": "location",
+						"value": "\"oda\"",
+						"start": 29,
+						"end": 32
+					}
+				]
+			},
+			{
+				"text": "Nincs 16.11?",
+				"intent": "erdeklodes",
+				"entities": [{
+					"entity": "time",
+					"value": "\"16:11\"",
+					"start": 6,
+					"end": 11
+				}]
+			},
+			{
+				"text": "Akkor a 16.23-asra kérek egy helyjegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 25,
+						"end": 28
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 29,
+						"end": 39
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 8,
+						"end": 13
+					}
+				]
+			},
+			{
+				"text": "És számlát is kérek róla.",
+				"intent": "szamla",
+				"entities": [{
+					"entity": "szamla",
+					"value": "\"számla\"",
+					"start": 3,
+					"end": 10
+				}]
+			},
+			{
+				"text": "Kézcsók, Ferihegyig kérek egy teljesárút.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 26,
+						"end": 29
+					},
+					{
+						"entity": "type",
+						"value": "\"teljesárú\"",
+						"start": 30,
+						"end": 40
+					},
+					{
+						"entity": "location",
+						"value": "\"ferihegy\"",
+						"start": 9,
+						"end": 19
+					},
+					{
+						"entity": "greet",
+						"value": "\"kézcsók\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "Jónapot, egy diákot kérek Ferihegytől Monorig",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 9,
+						"end": 12
+					},
+					{
+						"entity": "type",
+						"value": "\"diák\"",
+						"start": 13,
+						"end": 19
+					},
+					{
+						"entity": "location",
+						"value": "\"monor\"",
+						"start": 38,
+						"end": 45
+					},
+					{
+						"entity": "location",
+						"value": "\"ferihegy\"",
+						"start": 26,
+						"end": 37
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "Jónapot kívánok, Debrecenbe melyik vonattal érek leghamarabb?",
+				"intent": "erdeklodes",
+				"entities": [{
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 17,
+						"end": 27
+					},
+					{
+						"entity": "time",
+						"value": "\"leghamarabb\"",
+						"start": 49,
+						"end": 60
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot kívánok\"",
+						"start": 0,
+						"end": 15
+					}
+				]
+			},
+			{
+				"text": "Jó, akkor arra kérek egy 90%-osat.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 21,
+						"end": 24
+					},
+					{
+						"entity": "type",
+						"value": "\"90%-os\"",
+						"start": 25,
+						"end": 33
+					},
+					{
+						"entity": "time",
+						"value": "\"arra\"",
+						"start": 10,
+						"end": 14
+					}
+				]
+			},
+			{
+				"text": "Jónapot kívánok, lenne egy ilyenem és kettőnknek szeretnék egy jegyet Ferihegyre.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "greet",
+						"value": "\"jónapot kívánok\"",
+						"start": 0,
+						"end": 15
+					},
+					{
+						"entity": "count",
+						"value": "\"kettő\"",
+						"start": 38,
+						"end": 48
+					},
+					{
+						"entity": "location",
+						"value": "\"ferihegy\"",
+						"start": 70,
+						"end": 80
+					}
+				]
+			},
+			{
+				"text": "Csak oda.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+					"entity": "location",
+					"value": "\"oda\"",
+					"start": 5,
+					"end": 8
+				}]
+			},
+			{
+				"text": "Jónapot, Fótig kérek egy egészet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 21,
+						"end": 24
+					},
+					{
+						"entity": "type",
+						"value": "\"teljesárú\"",
+						"start": 25,
+						"end": 32
+					},
+					{
+						"entity": "location",
+						"value": "\"fót\"",
+						"start": 9,
+						"end": 14
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "Jónapot, Szegedre egy diákot a 15.53-asra.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 18,
+						"end": 21
+					},
+					{
+						"entity": "type",
+						"value": "\"diák\"",
+						"start": 22,
+						"end": 28
+					},
+					{
+						"entity": "location",
+						"value": "\"szeged\"",
+						"start": 9,
+						"end": 17
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					},
+					{
+						"entity": "time",
+						"value": "\"15:53\"",
+						"start": 8,
+						"end": 13
+					}
+				]
+			},
+			{
+				"text": "Dunakeszire egy teljesárút kérek.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 12,
+						"end": 15
+					},
+					{
+						"entity": "type",
+						"value": "\"teljesáru\"",
+						"start": 16,
+						"end": 26
+					},
+					{
+						"entity": "location",
+						"value": "\"dunakeszi\"",
+						"start": 0,
+						"end": 11
+					}
+				]
+			},
+			{
+				"text": "A most induló Nyugatiból Szeged állomásra szeretnék két helyjegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"két\"",
+						"start": 52,
+						"end": 55
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 56,
+						"end": 66
+					},
+					{
+						"entity": "location",
+						"value": "\"szeged\"",
+						"start": 25,
+						"end": 31
+					},
+					{
+						"entity": "location",
+						"value": "\"nyugati\"",
+						"start": 14,
+						"end": 24
+					},
+					{
+						"entity": "time",
+						"value": "\"most induló\"",
+						"start": 2,
+						"end": 13
+					}
+				]
+			},
+			{
+				"text": "Jónapot, Kecskemétre szeretnék egy közalkalmazottit csak oda.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 31,
+						"end": 34
+					},
+					{
+						"entity": "type",
+						"value": "\"közalkalmazott\"",
+						"start": 35,
+						"end": 51
+					},
+					{
+						"entity": "location",
+						"value": "\"kecskemét\"",
+						"start": 9,
+						"end": 20
+					},
+					{
+						"entity": "location",
+						"value": "\"oda\"",
+						"start": 52,
+						"end": 60
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "Egy 50%-osat hadd kérjek már Ferihegytől Ceglédig.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 0,
+						"end": 3
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 4,
+						"end": 12
+					},
+					{
+						"entity": "location",
+						"value": "\"cegléd\"",
+						"start": 41,
+						"end": 49
+					},
+					{
+						"entity": "location",
+						"value": "\"ferihegy\"",
+						"start": 29,
+						"end": 40
+					}
+				]
+			},
+			{
+				"text": "16.23-as Debreceni IC-re szeretnék kérni egy felnőtt jegyet, csak oda, és helyjeggyel együtt.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 41,
+						"end": 44
+					},
+					{
+						"entity": "type",
+						"value": "\"teljesárú\"",
+						"start": 45,
+						"end": 49
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 74,
+						"end": 85
+					},
+					{
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 9,
+						"end": 18
+					},
+					{
+						"entity": "location",
+						"value": "\"oda\"",
+						"start": 61,
+						"end": 69
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 0,
+						"end": 8
+					}
+				]
+			},
+			{
+				"text": "Jónapot kívánok, a 16.23-as Intercityre kérek egy felnőtt jegyet csak oda Debrecenig, számlát is fogok kérni.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 46,
+						"end": 49
+					},
+					{
+						"entity": "type",
+						"value": "\"teljesárú\"",
+						"start": 50,
+						"end": 57
+					},
+					{
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 74,
+						"end": 84
+					},
+					{
+						"entity": "location",
+						"value": "\"oda\"",
+						"start": 65,
+						"end": 73
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 19,
+						"end": 27
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot kívánok\"",
+						"start": 0,
+						"end": 15
+					},
+					{
+						"entity": "bill",
+						"value": "\"számla\"",
+						"start": 86,
+						"end": 93
+					}
+				]
+			},
+			{
+				"text": "Jónapot kívánok, lehet kártyával fizetni, ugye?",
+				"intent": "erdeklodes",
+				"entities": [{
+						"entity": "paying",
+						"value": "\"kártya\"",
+						"start": 23,
+						"end": 40
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot kívánok\"",
+						"start": 0,
+						"end": 15
+					}
+				]
+			},
+			{
+				"text": "Jónapot kívánok, holnapra kérek Pazmaneumig egy kiegészítő diákot.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 44,
+						"end": 47
+					},
+					{
+						"entity": "type",
+						"value": "\"kiegészítő diák\"",
+						"start": 48,
+						"end": 65
+					},
+					{
+						"entity": "location",
+						"value": "\"pazmaneum\"",
+						"start": 32,
+						"end": 43
+					},
+					{
+						"entity": "time",
+						"value": "\"holnap\"",
+						"start": 17,
+						"end": 25
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot kívánok\"",
+						"start": 0,
+						"end": 15
+					}
+				]
+			},
+			{
+				"text": "Mai napra szeretnék kérni Budapest Székesfehérvár között egy diákot oda-vissza és BKSZ-szel.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 57,
+						"end": 60
+					},
+					{
+						"entity": "type",
+						"value": "\"diák\"",
+						"start": 61,
+						"end": 67
+					},
+					{
+						"entity": "type",
+						"value": "\"oda-vissza\"",
+						"start": 68,
+						"end": 78
+					},
+					{
+						"entity": "type",
+						"value": "\"BKSZ\"",
+						"start": 82,
+						"end": 91
+					},
+					{
+						"entity": "location",
+						"value": "\"szekesfehervar\"",
+						"start": 35,
+						"end": 49
+					},
+					{
+						"entity": "location",
+						"value": "\"budapest\"",
+						"start": 26,
+						"end": 34
+					},
+					{
+						"entity": "time",
+						"value": "\"ma\"",
+						"start": 0,
+						"end": 9
+					}
+				]
+			},
+			{
+				"text": "Jónapot, a 16.23-as IC-re az első osztályra szeretnék kérni Debrecenig egy jegyet és egy helyjegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 71,
+						"end": 74
+					},
+					{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 20,
+						"end": 25
+					},
+					{
+						"entity": "type",
+						"value": "\"első osztály\"",
+						"start": 29,
+						"end": 43
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 89,
+						"end": 99
+					},
+					{
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 60,
+						"end": 70
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 11,
+						"end": 19
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "A 16.23-as debreceni IC-re csak egy helyjegyet szeretnék számlával és lehetne menetiránnyal szemben?",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 32,
+						"end": 35
+					},
+					{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 21,
+						"end": 26
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 36,
+						"end": 46
+					},
+					{
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 11,
+						"end": 20
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 2,
+						"end": 10
+					},
+					{
+						"entity": "bill",
+						"value": "\"számla\"",
+						"start": 57,
+						"end": 66
+					},
+					{
+						"entity": "seat",
+						"value": "\"menetirányú\"",
+						"start": 78,
+						"end": 99
+					}
+				]
+			},
+			{
+				"text": "Csókolom, a Taktára kérnék ablak mellé egy helyjegyet meg egy jegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 39,
+						"end": 42
+					},
+					{
+						"entity": "type",
+						"value": "\"teljesárú\"",
+						"start": 62,
+						"end": 68
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 43,
+						"end": 53
+					},
+					{
+						"entity": "location",
+						"value": "\"takta\"",
+						"start": 12,
+						"end": 19
+					},
+					{
+						"entity": "seat",
+						"value": "\"ablak mellett\"",
+						"start": 27,
+						"end": 38
+					},
+					{
+						"entity": "greet",
+						"value": "\"csókolom\"",
+						"start": 0,
+						"end": 8
+					}
+				]
+			},
+			{
+				"text": "És számlát is kérnék róla.",
+				"intent": "szamla",
+				"entities": [{
+					"entity": "bill",
+					"value": "\"számla\"",
+					"start": 3,
+					"end": 10
+				}]
+			},
+			{
+				"text": "Jónapot kívánok, a 16.23-as IC-re Nyíregyházáig egy diák helyjegyet és egy menetjegyet csak oda kérek.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 48,
+						"end": 51
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 52,
+						"end": 56
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 57,
+						"end": 67
+					},
+					{
+						"entity": "type",
+						"value": "\"menetjegy\"",
+						"start": 75,
+						"end": 86
+					},
+					{
+						"entity": "type",
+						"value": "\"csak oda\"",
+						"start": 87,
+						"end": 95
+					},
+					{
+						"entity": "location",
+						"value": "\"nyiregyháza\"",
+						"start": 34,
+						"end": 47
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 19,
+						"end": 27
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 15
+					}
+				]
+			},
+			{
+				"text": "16.23-asra Debrecenig egy helyjegyet kérnék csak oda, van jegyem.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 22,
+						"end": 25
+					},
+					{
+						"entity": "type",
+						"value": "\"csak oda\"",
+						"start": 44,
+						"end": 52
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 26,
+						"end": 36
+					},
+					{
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 11,
+						"end": 21
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 0,
+						"end": 10
+					}
+				]
+			},
+			{
+				"text": "Kezicsókolom, Kisújszállásra kérnék egy közalkalmazotti félárút.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 36,
+						"end": 39
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 56,
+						"end": 63
+					},
+					{
+						"entity": "location",
+						"value": "\"kisujszállás\"",
+						"start": 14,
+						"end": 25
+					},
+					{
+						"entity": "greet",
+						"value": "\"Kezicsókolom\"",
+						"start": 0,
+						"end": 12
+					}
+				]
+			},
+			{
+				"text": "Jónapot, a következő Debreceni sebesvonatra kerékpárt fel lehet vinni?",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "type",
+						"value": "\"sebesvonat\"",
+						"start": 31,
+						"end": 43
+					},
+					{
+						"entity": "time",
+						"value": "\"következő\"",
+						"start": 11,
+						"end": 20
+					},
+					{
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 21,
+						"end": 30
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					},
+					{
+						"entity": "content",
+						"value": "\"kerékpár\"",
+						"start": 44,
+						"end": 53
+					}
+				]
+			},
+			{
+				"text": "Csókolom, egy diákjegyet szeretnék Veresegyházig és BKV-bérletem is van.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 10,
+						"end": 13
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 14,
+						"end": 24
+					},
+					{
+						"entity": "location",
+						"value": "\"veresegyháza\"",
+						"start": 35,
+						"end": 48
+					},
+					{
+						"entity": "content",
+						"value": "\"BKV-bérlet\"",
+						"start": 52,
+						"end": 64
+					},
+					{
+						"entity": "greet",
+						"value": "\"csókolom\"",
+						"start": 0,
+						"end": 8
+					}
+				]
+			},
+			{
+				"text": "Jónapot, egy kiegészítő diákbérletet szeretnék holnaptól Pazmaneumig.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 9,
+						"end": 12
+					},
+					{
+						"entity": "type",
+						"value": "\"kiegészítő diákbérlet\"",
+						"start": 13,
+						"end": 36
+					},
+					{
+						"entity": "location",
+						"value": "\"pazmaneum\"",
+						"start": 57,
+						"end": 68
+					},
+					{
+						"entity": "time",
+						"value": "\"holnap\"",
+						"start": 47,
+						"end": 56
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "Jónapot kívánok, a legközelebbi Szolnoki IC-re kérnék szépen egy helyjegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 61,
+						"end": 64
+					},
+					{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 41,
+						"end": 46
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 66,
+						"end": 75
+					},
+					{
+						"entity": "location",
+						"value": "\"szolnok\"",
+						"start": 32,
+						"end": 40
+					},
+					{
+						"entity": "time",
+						"value": "\"legközelebbi\"",
+						"start": 19,
+						"end": 31
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot kívánok\"",
+						"start": 0,
+						"end": 15
+					}
+				]
+			},
+			{
+				"text": "Jónapot, egy diákjegyet Kecskemétre.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 9,
+						"end": 12
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 13,
+						"end": 23
+					},
+					{
+						"entity": "location",
+						"value": "\"kecskemét\"",
+						"start": 24,
+						"end": 35
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "Jónapot kívánok, 16.24-kor indul egy IC vonat Nyíregyházára, arra kérek egy diákjegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 72,
+						"end": 75
+					},
+					{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 37,
+						"end": 39
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 76,
+						"end": 86
+					},
+					{
+						"entity": "location",
+						"value": "\"nyíregyháza\"",
+						"start": 46,
+						"end": 59
+					},
+					{
+						"entity": "time",
+						"value": "\"16:24\"",
+						"start": 17,
+						"end": 26
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot kívánok\"",
+						"start": 0,
+						"end": 15
+					}
+				]
+			},
+			{
+				"text": "A most következő ...-re tartó Intercityre kérek egy helyjegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 48,
+						"end": 51
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 52,
+						"end": 62
+					},
+					{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 30,
+						"end": 41
+					},
+
+					{
+						"entity": "time",
+						"value": "\"következő\"",
+						"start": 2,
+						"end": 16
+					}
+				]
+			},
+			{
+				"text": "Nyíregyházára szeretnék egy elsőosztályú félárú jegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 24,
+						"end": 27
+					},
+					{
+						"entity": "type",
+						"value": "\"elsőosztály\"",
+						"start": 28,
+						"end": 40
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 41,
+						"end": 47
+					},
+					{
+						"entity": "location",
+						"value": "\"nyíregyháza\"",
+						"start": 0,
+						"end": 13
+					}
+				]
+			},
+			{
+				"text": "Kezicsókolom drága.",
+				"intent": "greet",
+				"entities": [{
+					"entity": "greet",
+					"value": "\"kezicsokolom\"",
+					"start": 0,
+					"end": 19
+				}]
+			},
+			{
+				"text": "START-kártyára.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+					"entity": "content",
+					"value": "\"START-kártya\"",
+					"start": 0,
+					"end": 14
+				}]
+			},
+			{
+				"text": "Számlát is kérek majd róla.",
+				"intent": "szamla",
+				"entities": [{
+					"entity": "szamla",
+					"value": "\"számla\"",
+					"start": 0,
+					"end": 7
+				}]
+			},
+			{
+				"text": "Nyíregyházára kérek egy másodosztályút 16.23-as Intercityre és egy helyjegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 20,
+						"end": 23
+					},
+					{
+						"entity": "type",
+						"value": "\"másodosztály\"",
+						"start": 24,
+						"end": 38
+					},
+					{
+						"entity": "type",
+						"value": "\"helyjegy\"",
+						"start": 67,
+						"end": 77
+					},
+					{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 48,
+						"end": 59
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 39,
+						"end": 47
+					},
+					{
+						"entity": "location",
+						"value": "\"nyíregyháza\"",
+						"start": 0,
+						"end": 13
+					}
+				]
+			},
+			{
+				"text": "...-re kérek egy 75%-osat április 24-én oda és május 2-án vissza.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 13,
+						"end": 16
+					},
+					{
+						"entity": "type",
+						"value": "\"75%-os\"",
+						"start": 17,
+						"end": 25
+					},
+					{
+						"entity": "time",
+						"value": "\"04.24.\"",
+						"start": 26,
+						"end": 39
+					},
+					{
+						"entity": "time",
+						"value": "\"05.02.\"",
+						"start": 47,
+						"end": 57
+					}
+				]
+			},
+			{
+				"text": "Jónapot, Felsőgödre kérek ilyen nyugdíjas jegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "type",
+						"value": "\"nyugdíjas\"",
+						"start": 32,
+						"end": 48
+					},
+					{
+						"entity": "location",
+						"value": "\"felsőgöd\"",
+						"start": 9,
+						"end": 19
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}
+				]
+			},
+			{
+				"text": "16.23-kor indul IC Debrecenbe, START-kártyás félárút szeretnék.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 16,
+						"end": 18
+					},
+					{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 45,
+						"end": 52
+					}, {
+						"entity": "location",
+						"value": "\"debrecen\"",
+						"start": 19,
+						"end": 29
+					},
+					{
+						"entity": "time",
+						"value": "\"16:23\"",
+						"start": 0,
+						"end": 9
+					},
+					{
+						"entity": "content",
+						"value": "\"START-kártya\"",
+						"start": 31,
+						"end": 44
+					}
+				]
+			},
+			{
+				"text": "Jónapot, pénteki dátummal kérek egy diákot Szobig, úgy hogy van kiegészítőm is.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "type",
+						"value": "\"50%-os\"",
+						"start": 36,
+						"end": 42
+					},
+					{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 32,
+						"end": 35
+					},
+					{
+						"entity": "greet",
+						"value": "\"jónapot\"",
+						"start": 0,
+						"end": 7
+					}, {
+						"entity": "location",
+						"value": "\"szob\"",
+						"start": 43,
+						"end": 49
+					},
+					{
+						"entity": "time",
+						"value": "\"péntek\"",
+						"start": 9,
+						"end": 16
+					},
+					{
+						"entity": "content",
+						"value": "\"kiegészítő\"",
+						"start": 64,
+						"end": 75
+					}
+				]
+			},
+			{
+				"text": "A Nyíregyházára induló IC-re kérek egy teljesárú jegyet.",
+				"intent": "vonat_foglalas",
+				"entities": [{
+						"entity": "type",
+						"value": "\"intercity\"",
+						"start": 23,
+						"end": 28
+					},
+					{
+						"entity": "count",
+						"value": "\"egy\"",
+						"start": 35,
+						"end": 37
+					},
+					{
+						"entity": "type",
+						"value": "\"teljesárú\"",
+						"start": 39,
+						"end": 48
+					}, {
+						"entity": "location",
+						"value": "\"nyíregyháza\"",
+						"start": 2,
+						"end": 15
+					}
+				]
+			},
+			{
+				"text": "viszlát",
+				"intent": "goodbye",
+				"entities": []
+			},
+			{
+				"text": "visszhall",
+				"intent": "goodbye",
+				"entities": []
+			},
+			{
+				"text": "hello",
+				"intent": "goodbye",
+				"entities": []
+			},
+			{
+				"text": "szia",
+				"intent": "goodbye",
+				"entities": []
+			},
+			{
+				"text": "vége",
+				"intent": "goodbye",
+				"entities": []
+			},
+			{
+				"text": "szép napot",
+				"intent": "goodbye",
+				"entities": []
+			}
+		]
+	}
+}

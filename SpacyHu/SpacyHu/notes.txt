@@ -1,0 +1,41 @@
+
+# Dependency parser could be improved to actually extract data from the results instead of just pasting it into the token
+# Constitutency parser might need to be changed?
+# NPChunker does not seem to perform well
+
+
+
+# To keep closer to the natural spacy style a tag_map.py should be written
+# Example: https://github.com/explosion/spaCy/blob/master/spacy/lang/en/tag_map.py
+# The entries in the dictionary should be all the possible values of token.tag_ (same as hfstana)
+# For example: [/N][Nom] or [/Det|art.Def]
+# Basically the whole left column from here: http://e-magyar.hu/hu/textmodules/emmorph_codelist
+# This dictionary is used by spacy to give value to the token.pos_ and possibly other attributes, which are readonly from the outside
+
+
+GOOD TO KNOW
+# To use SpacyHu as package give the following python commands:
+# import sys
+# sys.path.append('/home/mrengineer/School/DipTerv/aut_chatbots')
+# Where the path points to the folder containing the SpacyHu directory
+
+OLD TEST RASA-NLU
+Launch hungarian gate server on localhost:8000
+Navigate to aut_chatbots/Rasa_nlu_test
+python -m rasa_nlu.train --config config_spacyhu.json
+python -m rasa_nlu.server --path projects
+curl -X POST localhost:5000/parse -d '{"q":"Jónapot kívánok, lehet kártyával fizetni, ugye?"}' | python -m json.tool
+
+UPDATED RASA-NLU LAUNCH
+Navigate to aut_chatbots/Rasa_nlu_test
+python -m rasa_nlu.train --config config_spacyhu.yml --data ./Data/mavcorpus_2.json --path projects
+python -m rasa_nlu.server --path projects
+curl -X POST localhost:5000/parse -d '{"q":"Jónapot kívánok, lehet kártyával fizetni, ugye?"}' | python -m json.tool
+
+WORD2VEC
+necessary data: https://s3-us-west-1.amazonaws.com/fasttext-vectors/wiki.hu.vec
+
+TODO
+# change WordToVec so that the returned vector for a token includes the extracted features
+# move common functions to superclass
+# handle error, when a module does not work on server, e.g. npchunker or ner
